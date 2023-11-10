@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="hi"
+                 name="FleX"
+                 start-page="Default-topic.md">
+
+    <toc-element topic="Default-topic.md"/>
+    <toc-element topic="Flex-Particles-Phase.md"/>
+    <toc-element topic="eCAL-Reference.md"/>
+    <toc-element topic="eCAL-Test.md"/>
+    <toc-element topic="sln-Properties.md"/>
+    <toc-element topic="Force-Decomposition.md"/>
+</instance-profile>
