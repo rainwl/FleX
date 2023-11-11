@@ -6,3 +6,19 @@
 
 # android
 *.apk
+
+demo/compiler/vc14win64/.idea/.idea.flexDemoCUDA/.idea/
+
+demo/compiler/vc14win64/build/win64/release/
+
+demo/d3d/shaders/
+
+extensions/compiler/vc14win64/build/win64/release/
+
+*.exe
+
+bin/win64/
+
+lib/win64/
+
+extensions/compiler/vc14win64/x64/release/
