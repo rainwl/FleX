@@ -22,3 +22,4 @@ bin/win64/
 lib/win64/
 
 extensions/compiler/vc14win64/x64/release/
+Writerside/.idea/
