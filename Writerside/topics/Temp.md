@@ -4,39 +4,15 @@
 
 Here is the scene loading order and configuration.
 
-| Scene              |
-|--------------------|
-| HapticDeviceStatus |
-| Evaluation         |
-| SerialPort         |
-| Geomagic           |
-| SofaScene          |
-| InstrumentSwitch   |
+Scene
+: HapticDeviceStatus
+: Evaluation      
+: SerialPort      
+: Geomagic        
+: SofaScene       
+: InstrumentSwitch
 
-| object            | point                       | Value                                       |
-|-------------------|-----------------------------|---------------------------------------------|
-| geo_magic         | ->m_toolData                | &serial_port->tool_data                     |
-| geo_magic         | ->m_worldXZForce            | &evaluation->m_worldXZForce                 |
-| geo_magic         | ->setHapticDeviceStatus( )  | &haptic_device_status->m_hapticDeviceStatus |
-| geo_magic         | ->m_sofaScene               | sofa_scene                                  |
-| ---               | ---                         | ---                                         |
-| instrument_switch | ->m_pos_add                 | sofa_scene->m_posAdd                        |
-| instrument_switch | ->m_rot_add                 | sofa_scene->m_rotAdd                        |
-| instrument_switch | ->m_pos_device              | &sofa_scene->m_posDevice                    |
-| instrument_switch | ->m_is_tearing              | &sofa_scene->m_isTearing                    |
-| instrument_switch | ->m_tear_force              | &sofa_scene->m_tearForce                    |
-| instrument_switch | ->m_pos_endoscope           | &sofa_scene->m_posEndoscope                 |
-| instrument_switch | ->m_pos_tube                | &sofa_scene->m_posTube                      |
-| instrument_switch | ->m_tool_data               | &serial_port->tool_data                     |
-| instrument_switch | ->m_touching_soft_body_type | &evaluation->m_touchingSoftBodyType         |
-| instrument_switch | ->m_torn_soft_body_type     | &evaluation->m_tornSoftBodyType             |
-| instrument_switch | ->m_torn_proportion         | &evaluation->m_tornProportion               |
-| instrument_switch | ->m_grasping_status         | &evaluation->m_graspingStatus               |
-| instrument_switch | ->m_touching_vessel_type    | &evaluation->m_touchingVesselType           |
-| instrument_switch | ->m_blooding_points         | &evaluation->m_bloodingPoints               |
-| instrument_switch | ->m_tips_points             | &evaluation->m_tipsPoints                   |
-| ---               | ---                         | ---                                         |
-| geo_magic         | ->m_instrumentSwitch        | instrument_switch                           |
+![](ref.png)
 
 ## Decoupling
 
@@ -56,6 +32,8 @@ Here are some values to consider for the emulated server.
 | void BeforeTick()          |          | SofaScene.h           | Tear and compute force    |
 |                            |          |                       |                           |
 |                            |          |                       |                           |
+
+![](coupling.png)
 
 ## HapticDeviceStatus.h
 
